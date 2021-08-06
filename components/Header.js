@@ -39,6 +39,7 @@ function Header({ placerholder }) {
                 noOfGuests,
             }
         });
+        setSearchInput('');
     };
     
     const selectionRange = {
@@ -66,7 +67,7 @@ function Header({ placerholder }) {
                 <input 
                     value={searchInput} 
                     onChange={(e) => setSearchInput(e.target.value)}
-                    className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400" 
+                    className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400 capitalize" 
                     type="text" 
                     placeholder={placerholder || "Start your search"}
                 />
@@ -85,7 +86,7 @@ function Header({ placerholder }) {
             </div>
 
             {searchInput && (
-                <div className="flex flex-col col-span-3 ">
+                <div className="flex flex-col col-span-3 mx-auto">
                     <DateRangePicker 
                         ranges={[selectionRange]}
                         minDate={new Date()}
