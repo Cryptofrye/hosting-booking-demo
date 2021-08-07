@@ -55,8 +55,11 @@ function Map({ searchResults }) {
                             closeOnClick={true}
                             latitude={result.lat}
                             longitude={result.long}
+                            
                         >
-                            {result.title}
+                            <div className="">
+                                {result.title}
+                            </div>
                         </Popup>
                     ):(
                         false
